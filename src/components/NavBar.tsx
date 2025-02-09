@@ -5,7 +5,7 @@ export default function NavBar({ isScrolled }: { isScrolled: boolean }) {
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-sm shadow-md"
+          ? "bg-background/5 backdrop-blur-md shadow-lg"
           : "bg-transparent"
       }`}
     >
