@@ -33,7 +33,7 @@ export default function Home() {
 
       <footer className="relative py-8 bg-white/10 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white/70">
-          <p>© 2025 John Doe. All rights reserved.</p>
+          <p>© 2025 Chandra Prakash. All rights reserved.</p>
         </div>
       </footer>
     </main>

@@ -6,10 +6,14 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-          Hi, I&aposm <span className="text-blue-400">John Doe</span>
+          {`Hi, I'm`} <span className="text-blue-400">Chandra Prakash</span>
         </h1>
         <p className="text-xl md:text-2xl text-white/80 mb-8">
-          Full Stack Developer & UI/UX Designer
+          Full Stack Developer
+        </p>
+        <p className=" mt-[-18px] mb-4 font-extralight text-gray-200">
+          Proficient in Javascript, React, NextJS, Express, NodeJS, Postgresql,
+          MongoDB, TypeScript
         </p>
         <div className="flex justify-center space-x-4">
           <a
@@ -20,7 +24,7 @@ export default function HeroSection() {
           </a>
           <a
             href="#projects"
-            className="border border-white/30 text-white px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
+            className="border border-white/40 text-white px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
           >
             View Work
           </a>

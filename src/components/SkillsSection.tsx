@@ -10,7 +10,7 @@ export default function SkillsSection() {
         <h2 className="text-3xl font-bold mb-12 text-center text-white">
           Skills
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {[
             "JavaScript",
             "TypeScript",
@@ -19,11 +19,9 @@ export default function SkillsSection() {
             "Next.js",
             "TailwindCSS",
             "PostgreSQL",
-            "GraphQL",
             "Docker",
             "AWS",
             "Git",
-            "Agile",
           ].map((skill) => (
             <div
               key={skill}

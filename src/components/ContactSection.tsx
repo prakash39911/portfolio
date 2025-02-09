@@ -1,7 +1,20 @@
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail } from "lucide-react";
 import React from "react";
 
 export default function ContactSection() {
+  const handleMessage = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    await fetch("/api/sendNotification", {
+      method: "POST",
+      body: JSON.stringify({
+        fcmToken: "USER_FCM_TOKEN",
+        title: "Hello!",
+        body: "This is a test notification.",
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
+  };
+
   return (
     <section id="contact" className="relative py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,25 +32,7 @@ export default function ContactSection() {
                 className="flex items-center space-x-3 text-white/70 hover:text-white transition-colors"
               >
                 <Mail size={20} />
-                <span>john@example.com</span>
-              </a>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-3 text-white/70 hover:text-white transition-colors"
-              >
-                <Github size={20} />
-                <span>github.com/johndoe</span>
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-3 text-white/70 hover:text-white transition-colors"
-              >
-                <Linkedin size={20} />
-                <span>linkedin.com/in/johndoe</span>
+                <span>prakash39911@gmail.com</span>
               </a>
             </div>
           </div>
@@ -87,6 +82,7 @@ export default function ContactSection() {
             <button
               type="submit"
               className="w-full bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors"
+              onClick={(e: React.MouseEvent) => handleMessage(e)}
             >
               Send Message
             </button>

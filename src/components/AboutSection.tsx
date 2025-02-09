@@ -1,4 +1,5 @@
-import { User, Code, Briefcase } from "lucide-react";
+import { User, Code } from "lucide-react";
+import Image from "next/image";
 import React from "react";
 
 export default function AboutSection() {
@@ -9,40 +10,37 @@ export default function AboutSection() {
           About Me
         </h2>
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="aspect-square relative rounded-2xl overflow-hidden">
-            {/* <Image
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80"
-                alt="Profile"
-                width={600}
-                height={600}
-                className="object-cover w-full h-full"
-              /> */}
+          <div className="aspect-auto relative rounded-2xl overflow-hidden">
+            <Image
+              src="https://res.cloudinary.com/prakcloud/image/upload/v1739038757/zehzgkqwlpf99gaffcou.jpg"
+              alt="Profile"
+              width={600}
+              height={600}
+              className="object-cover w-full h-full"
+            />
           </div>
           <div className="text-white">
             <p className="text-lg mb-6">
-              I&aposm a passionate Full Stack Developer with 5 years of
-              experience in building web applications. I specialize in React,
-              Node.js, and modern web technologies.
+              {`I'm a passionate Full Stack Developer in building web
+              applications. I specialize in Both Front-end and Back-end.`}
             </p>
             <div className="flex space-x-4">
               <User className="text-blue-400" size={24} />
               <div>
                 <h3 className="font-semibold">Background</h3>
-                <p className="text-white/70">Computer Science Graduate</p>
+                <p className="text-white/70">
+                  Electrical and Electronics Graduate
+                </p>
               </div>
             </div>
             <div className="flex space-x-4 mt-4">
               <Code className="text-blue-400" size={24} />
               <div>
                 <h3 className="font-semibold">Technologies</h3>
-                <p className="text-white/70">React, Node.js, TypeScript</p>
-              </div>
-            </div>
-            <div className="flex space-x-4 mt-4">
-              <Briefcase className="text-blue-400" size={24} />
-              <div>
-                <h3 className="font-semibold">Experience</h3>
-                <p className="text-white/70">5+ Years in Web Development</p>
+                <p className="text-white/70">
+                  React, Node.js, TypeScript, Express, SQl and NoSql Databases,
+                  TailwindCSS
+                </p>
               </div>
             </div>
           </div>
