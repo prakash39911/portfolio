@@ -26,12 +26,6 @@ export default function NavBar({ isScrolled }: { isScrolled: boolean }) {
               Projects
             </a>
             <a
-              href="#skills"
-              className="text-white/90 hover:text-white transition-colors"
-            >
-              Skills
-            </a>
-            <a
               href="#contact"
               className="text-white/90 hover:text-white transition-colors"
             >

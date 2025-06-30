@@ -6,12 +6,14 @@ import {
   contactFormSchemaType,
 } from "@/lib/schema/ContactFormSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Mail } from "lucide-react";
+import { GithubIcon, LucideLinkedin, Mail } from "lucide-react";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 export default function ContactSection() {
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isLoading, setisLoading] = useState(false);
+  const [isError, setIsError] = useState<string | null>(null);
 
   const {
     register,
@@ -24,16 +26,27 @@ export default function ContactSection() {
   });
 
   const actualSubmit = async (data: contactFormSchemaType) => {
-    const result = await sendMail(data);
+    setisLoading(true);
+    try {
+      const result = await sendMail(data);
 
-    if (!result || result?.status === "error")
-      throw new Error("Message is not sent! Please try again");
+      if (!result || result?.status === "error")
+        throw new Error("Message is not sent! Please try again");
 
-    setIsSuccess(true);
-    reset();
-    setTimeout(() => {
-      setIsSuccess(false);
-    }, 8000);
+      setIsSuccess(true);
+      reset();
+      setTimeout(() => {
+        setIsSuccess(false);
+      }, 8000);
+    } catch (error) {
+      console.log("Error while sending message", error);
+      setIsError("Unable to Send Message.. Please try again..");
+      setTimeout(() => {
+        setIsError(null);
+      }, 5000);
+    } finally {
+      setisLoading(false);
+    }
   };
 
   return (
@@ -54,6 +67,30 @@ export default function ContactSection() {
               >
                 <Mail size={20} />
                 <span>prakash39911@gmail.com</span>
+              </a>
+            </div>
+            <div className="space-y-5 flex items-center gap-3 text-gray-300">
+              <span className="mt-[17px]">
+                <LucideLinkedin size={20} />
+              </span>
+              <a
+                href="https://www.linkedin.com/in/chandra-prakash-132094328"
+                target="_blank"
+                className="text-blue-400"
+              >
+                LinkedIn
+              </a>
+            </div>
+            <div className="space-y-5 flex items-center gap-3 text-gray-300">
+              <span className="mt-[19px]">
+                <GithubIcon size={20} />
+              </span>
+              <a
+                href="https://github.com/prakash39911"
+                target="_blank"
+                className="text-blue-400"
+              >
+                GitHub
               </a>
             </div>
           </div>
@@ -114,10 +151,16 @@ export default function ContactSection() {
             </div>
             <button
               type="submit"
+              disabled={isLoading}
               className="w-full bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors"
             >
-              Send Message
+              {isLoading ? "Processing...Please Wait" : "Send message"}
             </button>
+            {isError && (
+              <div className="text-xl text-red-500 font-semibold">
+                {isError}
+              </div>
+            )}
             {isSuccess && (
               <div className="text-xl text-gray-300 font-semibold">
                 You message is received Successfully!

@@ -6,7 +6,6 @@ import NavBar from "@/components/NavBar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ProjectSection from "@/components/ProjectSection";
-import SkillsSection from "@/components/SkillsSection";
 import ContactSection from "@/components/ContactSection";
 // import Image from "next/image";
 
@@ -28,7 +27,6 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ProjectSection />
-      <SkillsSection />
       <ContactSection />
 
       <footer className="relative py-8 bg-white/10 backdrop-blur-sm">

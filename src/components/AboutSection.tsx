@@ -1,5 +1,4 @@
-import { User, Code } from "lucide-react";
-import Image from "next/image";
+import { User } from "lucide-react";
 import React from "react";
 
 export default function AboutSection() {
@@ -9,37 +8,30 @@ export default function AboutSection() {
         <h2 className="text-3xl font-bold mb-12 text-center text-white">
           About Me
         </h2>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="aspect-auto relative rounded-2xl overflow-hidden">
-            <Image
-              src="https://res.cloudinary.com/prakcloud/image/upload/v1739038757/zehzgkqwlpf99gaffcou.jpg"
-              alt="Profile"
-              width={600}
-              height={600}
-              className="object-cover w-full h-full"
-            />
-          </div>
+        <div className="grid gap-12 items-center">
           <div className="text-white">
             <p className="text-lg mb-6">
-              {`I'm a passionate Full Stack Developer in building web
-              applications. I specialize in Both Front-end and Back-end.`}
+              Full-Stack Developer with a strong foundation in building and
+              deploying scalable web applications using the{" "}
+              <strong>MERN/PERN stack</strong>. Demonstrated expertise through
+              developing a full-featured Learning Management System and an
+              AI-powered Text-to-Video generator. Proficient in front-end (
+              <strong>React.js</strong>, <strong>Next.js</strong>,{" "}
+              <strong>TypeScript</strong>) and back-end (
+              <strong>Node.js</strong>, <strong>Express.js</strong>)
+              development, delivering high-performance, SEO-optimized, and
+              robust solutions.
             </p>
-            <div className="flex space-x-4">
+
+            <div className="flex space-x-4 mt-5">
               <User className="text-blue-400" size={24} />
               <div>
-                <h3 className="font-semibold">Background</h3>
+                <h3 className="font-semibold">Education</h3>
                 <p className="text-white/70">
-                  Electrical and Electronics Graduate
+                  Bachelor of Engineering (B.E), Electrical and Electronics
                 </p>
-              </div>
-            </div>
-            <div className="flex space-x-4 mt-4">
-              <Code className="text-blue-400" size={24} />
-              <div>
-                <h3 className="font-semibold">Technologies</h3>
                 <p className="text-white/70">
-                  React, Node.js, TypeScript, Express, SQl and NoSql Databases,
-                  TailwindCSS
+                  Sir M. Visvesvaraya Institute of Technology, Bangalore
                 </p>
               </div>
             </div>

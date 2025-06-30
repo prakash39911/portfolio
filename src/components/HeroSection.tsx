@@ -8,12 +8,12 @@ export default function HeroSection() {
         <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
           {`Hi, I'm`} <span className="text-blue-400">Chandra Prakash</span>
         </h1>
-        <p className="text-xl md:text-2xl text-white/80 mb-8">
+        <p className="text-2xl font-bold md:text-2xl text-white/80 mb-8">
           Full Stack Developer
         </p>
-        <p className=" mt-[-18px] mb-4 font-extralight text-gray-200">
-          Proficient in Javascript, React, NextJS, Express, NodeJS, Postgresql,
-          MongoDB, TypeScript
+        <p className=" mt-[-18px] text-xl mb-4 font-extralight text-gray-200">
+          Specializes in JavaScript, React.js, Next.js, Express.js, Node.js,
+          PostgreSQL, MongoDB, TypeScript, Pinecone Vector DB, RAG, Git, GitHub
         </p>
         <div className="flex justify-center space-x-4">
           <a
