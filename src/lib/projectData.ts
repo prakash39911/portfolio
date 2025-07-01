@@ -1,8 +1,18 @@
+export type ProjectDataType = {
+  title: string;
+  image: string;
+  videoUrl: string;
+  liveUrl: string;
+  description: string;
+  techStack: string[];
+};
+
 export const projectData = [
   {
     title: "Learning Management System (LMS)",
     image: "Screenshot_from_2025-06-29_09-46-45_uztqh3",
-    videoUrl: "",
+    videoUrl:
+      "https://res.cloudinary.com/prakashcloud/video/upload/v1751347629/LMS_Demo_1_vvwgtv.mp4",
     liveUrl: "https://lms-next-js-frontend.vercel.app/",
     description:
       "A full-stack Learning Management System where teachers can create, sell, and analyze video courses. Students enjoy a seamless learning experience with progress tracking, secure Razorpay payments, and innovative AI tools. Instantly generate video summaries for revision or ask the intelligent RAG chatbot for course details. Built with Next.js and Node.js for top-tier performance and SEO.",
@@ -20,7 +30,8 @@ export const projectData = [
   {
     title: "AI Text-to-Video Generator",
     image: "Screenshot_from_2025-06-28_06-25-21_u1dopm",
-    videoUrl: "",
+    videoUrl:
+      "https://res.cloudinary.com/prakashcloud/video/upload/v1751347623/Text_To_Video_Demo_1_eir682.mp4",
     liveUrl: "https://text-or-image-to-video.vercel.app/",
     description:
       "Text-To-Video is an AI-powered web application that transforms a simple prompt into a short, engaging video with music. Users can purchase credits, generate videos, receive live notifications, and download their creations. The app leverages modern technologies and a robust microservices-style architecture to handle each step reliably and at scale.",

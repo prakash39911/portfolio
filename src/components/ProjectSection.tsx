@@ -1,20 +1,33 @@
+"use client";
+
 import { projectData } from "@/lib/projectData";
 import React from "react";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "./ProjectShowcaseCard";
 
 export default function ProjectSection() {
   return (
-    <section id="projects" className="relative py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-12 text-center text-white">
-          Featured Projects
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projectData.map((project) => (
-            <ProjectCard eachProject={project} key={project.title} />
-          ))}
+    <>
+      <section
+        id="projects"
+        className="relative min-h-screen bg-gray-900 px-5 pt-20"
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h1 className="text-5xl font-bold text-white mb-4">
+              Project Showcase
+            </h1>
+          </div>
+
+          <div className="grid col-span-1 gap-10 md:grid-cols-2 xl:grid-cols-3">
+            {projectData.map((project) => (
+              <div key={project.title}>
+                <ProjectCard project={project} />
+              </div>
+            ))}
+            s{" "}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
